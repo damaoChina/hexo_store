@@ -84,6 +84,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="Damao的个人小站" type="application/atom+xml" />
+
 
 
 
@@ -94,18 +96,18 @@
 
 
 
-<meta name="description" content="function doDecrypt(pwd, onError) { 	console.log(&quot;in doDecrypt&quot;); 	var txt = document.getElementById(&quot;enc_content&quot;).innerHTML; 	var plantext; 	try { 	  	var bytes = CryptoJS.AES.decrypt(txt, pwd); 		p">
+<meta name="description" content="U2FsdGVkX19kK25soXSu0t2Yi+rvusmIQgUoRnQTv4l54O0NcUebkR15jmV8Zh009nIG+iVpK95JRvDymt5dEUHPF0p5sV8sMgmwuNGJgp0cv/8CEr2Qyx9cJ8JY92Xi+ojzoxF1bL/YICN3XEwoXmViJjIHfsJf8hQ11JtHqBKDyjPwOOuux1NdQBTy/P/FkbBdCiAv">
 <meta name="keywords" content="svn,工具集合">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何优雅（无限）的使用（试用） versions">
 <meta property="og:url" content="http://zxfei.cn/2017/10/17/如何优雅（无限）的使用（试用）-versions/index.html">
 <meta property="og:site_name" content="Damao的个人小站">
-<meta property="og:description" content="function doDecrypt(pwd, onError) { 	console.log(&quot;in doDecrypt&quot;); 	var txt = document.getElementById(&quot;enc_content&quot;).innerHTML; 	var plantext; 	try { 	  	var bytes = CryptoJS.AES.decrypt(txt, pwd); 		p">
+<meta property="og:description" content="U2FsdGVkX19kK25soXSu0t2Yi+rvusmIQgUoRnQTv4l54O0NcUebkR15jmV8Zh009nIG+iVpK95JRvDymt5dEUHPF0p5sV8sMgmwuNGJgp0cv/8CEr2Qyx9cJ8JY92Xi+ojzoxF1bL/YICN3XEwoXmViJjIHfsJf8hQ11JtHqBKDyjPwOOuux1NdQBTy/P/FkbBdCiAv">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-17T10:01:07.000Z">
+<meta property="og:updated_time" content="2017-12-29T10:43:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何优雅（无限）的使用（试用） versions">
-<meta name="twitter:description" content="function doDecrypt(pwd, onError) { 	console.log(&quot;in doDecrypt&quot;); 	var txt = document.getElementById(&quot;enc_content&quot;).innerHTML; 	var plantext; 	try { 	  	var bytes = CryptoJS.AES.decrypt(txt, pwd); 		p">
+<meta name="twitter:description" content="U2FsdGVkX19kK25soXSu0t2Yi+rvusmIQgUoRnQTv4l54O0NcUebkR15jmV8Zh009nIG+iVpK95JRvDymt5dEUHPF0p5sV8sMgmwuNGJgp0cv/8CEr2Qyx9cJ8JY92Xi+ojzoxF1bL/YICN3XEwoXmViJjIHfsJf8hQ11JtHqBKDyjPwOOuux1NdQBTy/P/FkbBdCiAv">
 
 
 
@@ -340,35 +342,7 @@
       
 
       
-        <script src=/js/crypto-js.js></script><script>
-function doDecrypt(pwd, onError) {
-	console.log("in doDecrypt");
-	var txt = document.getElementById("enc_content").innerHTML;
-	var plantext;
-	try {
-	  	var bytes = CryptoJS.AES.decrypt(txt, pwd);
-		plaintext = bytes.toString(CryptoJS.enc.Utf8);
-	} catch(err) {
-		if(onError) {onError(err);}
-		return;
-	}
-	document.getElementById("enc_content").innerHTML = plaintext;
-	document.getElementById("enc_content").style.display = "block";
-   document.getElementById("enc_passwd").style.display = "none";
-}
-</script>
-<div id="enc_content" style="display:none">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</div><div id="enc_passwd"> <input id="enc_pwd_input" type="text" style="border-radius: 5px;border-style: groove;height: 30px;width: 50%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;padding-left: 5px;" onkeydown="if (event.keyCode == 13) { decrypt(); return false;}"> <input type="submit" value="解&nbsp;密" onclick="decrypt()" style="width: 58px;height: 34px;border-radius: 5px;background-color: white;border-style: solid;color: currentColor;"><div id="enc_error" style="display: inline-block;color: #d84527;margin-left: 10px"></div>
-<script>
-var onError = function(error) {
-	document.getElementById("enc_error").innerHTML = "password error!"
-};
-function decrypt() {
-var passwd = document.getElementById("enc_pwd_input").value;
-console.log(passwd);
-doDecrypt(passwd, onError);
-}
-</script>
-</div>
+        <div id="enc_content">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</div><script src="/js/crypto-js.js"></script><script>var pwd = window.prompt("please input password","");var txt = document.getElementById("enc_content").innerHTML;var bytes  = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);document.getElementById("enc_content").innerHTML = plaintext</script>
       
     </div>
     
@@ -480,7 +454,7 @@ doDecrypt(passwd, onError);
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -501,6 +475,13 @@ doDecrypt(passwd, onError);
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
